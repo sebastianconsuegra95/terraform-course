@@ -7,3 +7,5 @@ tags = {
   "owner" = "Sebastian"
   "IAC"   = "Terraform"
 }
+
+sg_ingress_cidr = "0.0.0.0/0"
