@@ -1,9 +1,14 @@
 {
   "version": 4,
   "terraform_version": "1.8.0",
-  "serial": 98,
+  "serial": 93,
   "lineage": "a62f17b0-0c5e-44fd-feba-242439f06b8f",
-  "outputs": {},
+  "outputs": {
+    "ec2_public_ip": {
+      "value": "3.215.175.32",
+      "type": "string"
+    }
+  },
   "resources": [
     {
       "mode": "data",
@@ -34,14 +39,14 @@
     {
       "mode": "managed",
       "type": "aws_instance",
-      "name": "mywebserver",
+      "name": "public_instance",
       "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
       "instances": [
         {
           "schema_version": 1,
           "attributes": {
             "ami": "ami-051f8a213df8bc089",
-            "arn": "arn:aws:ec2:us-east-1:976859928792:instance/i-0d8088f0baf543d28",
+            "arn": "arn:aws:ec2:us-east-1:976859928792:instance/i-0dd4a14cd2f6939fa",
             "associate_public_ip_address": true,
             "availability_zone": "us-east-1d",
             "capacity_reservation_specification": [
@@ -72,7 +77,7 @@
             "host_id": null,
             "host_resource_group_arn": null,
             "iam_instance_profile": "",
-            "id": "i-0d8088f0baf543d28",
+            "id": "i-0dd4a14cd2f6939fa",
             "instance_initiated_shutdown_behavior": "stop",
             "instance_state": "running",
             "instance_type": "t2.micro",
@@ -99,8 +104,8 @@
             "password_data": "",
             "placement_group": "",
             "placement_partition_number": null,
-            "primary_network_interface_id": "eni-0e7b6442eea666b42",
-            "private_dns": "ip-10-10-0-122.ec2.internal",
+            "primary_network_interface_id": "eni-045dbba106fe7b5ef",
+            "private_dns": "ip-10-10-0-251.ec2.internal",
             "private_dns_name_options": [
               {
                 "enable_resource_name_dns_a_record": false,
@@ -108,9 +113,9 @@
                 "hostname_type": "ip-name"
               }
             ],
-            "private_ip": "10.10.0.122",
+            "private_ip": "10.10.0.251",
             "public_dns": "",
-            "public_ip": "3.219.29.226",
+            "public_ip": "3.215.175.32",
             "root_block_device": [
               {
                 "delete_on_termination": true,
@@ -120,7 +125,7 @@
                 "kms_key_id": "",
                 "tags": {},
                 "throughput": 125,
-                "volume_id": "vol-009fd4fc4ea732422",
+                "volume_id": "vol-005071948332b2dae",
                 "volume_size": 8,
                 "volume_type": "gp3"
               }
@@ -129,18 +134,15 @@
             "security_groups": [],
             "source_dest_check": true,
             "subnet_id": "subnet-02d696e16ecf51363",
-            "tags": {
-              "Name": "myserver"
-            },
+            "tags": {},
             "tags_all": {
               "IAC": "Terraform",
-              "Name": "myserver",
               "env": "Dev",
               "owner": "Sebastian"
             },
             "tenancy": "default",
             "timeouts": null,
-            "user_data": null,
+            "user_data": "01f37df98355eb78e8ebbf55a1466221727dde84",
             "user_data_base64": null,
             "user_data_replace_on_change": false,
             "volume_tags": null,
