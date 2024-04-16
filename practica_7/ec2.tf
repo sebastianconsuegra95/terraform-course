@@ -1,7 +1,7 @@
 variable "instancias" {
   description = "Nombre de las Instancias"
   type        = list(string)
-  default     = ["apache"]
+  default     = ["apache","mysql"]
 }
 
 resource "aws_instance" "public_instance" {
