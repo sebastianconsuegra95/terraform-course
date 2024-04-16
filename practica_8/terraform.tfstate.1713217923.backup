@@ -1,9 +1,14 @@
 {
   "version": 4,
   "terraform_version": "1.8.0",
-  "serial": 166,
+  "serial": 93,
   "lineage": "a62f17b0-0c5e-44fd-feba-242439f06b8f",
-  "outputs": {},
+  "outputs": {
+    "ec2_public_ip": {
+      "value": "3.215.175.32",
+      "type": "string"
+    }
+  },
   "resources": [
     {
       "mode": "data",
@@ -38,13 +43,12 @@
       "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
       "instances": [
         {
-          "index_key": "apache",
           "schema_version": 1,
           "attributes": {
             "ami": "ami-051f8a213df8bc089",
-            "arn": "arn:aws:ec2:us-east-1:976859928792:instance/i-0b9215910fce785d4",
+            "arn": "arn:aws:ec2:us-east-1:976859928792:instance/i-0dd4a14cd2f6939fa",
             "associate_public_ip_address": true,
-            "availability_zone": "us-east-1f",
+            "availability_zone": "us-east-1d",
             "capacity_reservation_specification": [
               {
                 "capacity_reservation_preference": "open",
@@ -73,7 +77,7 @@
             "host_id": null,
             "host_resource_group_arn": null,
             "iam_instance_profile": "",
-            "id": "i-0b9215910fce785d4",
+            "id": "i-0dd4a14cd2f6939fa",
             "instance_initiated_shutdown_behavior": "stop",
             "instance_state": "running",
             "instance_type": "t2.micro",
@@ -100,8 +104,8 @@
             "password_data": "",
             "placement_group": "",
             "placement_partition_number": null,
-            "primary_network_interface_id": "eni-0c2cb40b07590476e",
-            "private_dns": "ip-10-10-0-153.ec2.internal",
+            "primary_network_interface_id": "eni-045dbba106fe7b5ef",
+            "private_dns": "ip-10-10-0-251.ec2.internal",
             "private_dns_name_options": [
               {
                 "enable_resource_name_dns_a_record": false,
@@ -109,9 +113,9 @@
                 "hostname_type": "ip-name"
               }
             ],
-            "private_ip": "10.10.0.153",
+            "private_ip": "10.10.0.251",
             "public_dns": "",
-            "public_ip": "3.233.242.44",
+            "public_ip": "3.215.175.32",
             "root_block_device": [
               {
                 "delete_on_termination": true,
@@ -121,7 +125,7 @@
                 "kms_key_id": "",
                 "tags": {},
                 "throughput": 125,
-                "volume_id": "vol-08e4b267f677ef417",
+                "volume_id": "vol-005071948332b2dae",
                 "volume_size": 8,
                 "volume_type": "gp3"
               }
@@ -129,26 +133,21 @@
             "secondary_private_ips": [],
             "security_groups": [],
             "source_dest_check": true,
-            "subnet_id": "subnet-0497beddc88c76b93",
-            "tags": {
-              "Name": "apache-cerverus-dev-virginia"
-            },
+            "subnet_id": "subnet-02d696e16ecf51363",
+            "tags": {},
             "tags_all": {
-              "Name": "apache-cerverus-dev-virginia",
-              "env": "dev",
-              "iac": "Terraform",
-              "owner": "Sebastian",
-              "project": "cerverus",
-              "region": "virginia"
+              "IAC": "Terraform",
+              "env": "Dev",
+              "owner": "Sebastian"
             },
             "tenancy": "default",
             "timeouts": null,
-            "user_data": "e38e799b3bf594682c763a537df488e0398cba19",
+            "user_data": "01f37df98355eb78e8ebbf55a1466221727dde84",
             "user_data_base64": null,
             "user_data_replace_on_change": false,
             "volume_tags": null,
             "vpc_security_group_ids": [
-              "sg-0c68a9105c4ec4de3"
+              "sg-03d22c09325e3befc"
             ]
           },
           "sensitive_attributes": [],
@@ -171,22 +170,20 @@
         {
           "schema_version": 0,
           "attributes": {
-            "arn": "arn:aws:ec2:us-east-1:976859928792:internet-gateway/igw-0d5a5de67224efdac",
-            "id": "igw-0d5a5de67224efdac",
+            "arn": "arn:aws:ec2:us-east-1:976859928792:internet-gateway/igw-0a605829f47f6f4d9",
+            "id": "igw-0a605829f47f6f4d9",
             "owner_id": "976859928792",
             "tags": {
-              "Name": "igw_internet_gateway-cerverus-dev-virginia"
+              "Name": "igw internet gateway"
             },
             "tags_all": {
-              "Name": "igw_internet_gateway-cerverus-dev-virginia",
-              "env": "dev",
-              "iac": "Terraform",
-              "owner": "Sebastian",
-              "project": "cerverus",
-              "region": "virginia"
+              "IAC": "Terraform",
+              "Name": "igw internet gateway",
+              "env": "Dev",
+              "owner": "Sebastian"
             },
             "timeouts": null,
-            "vpc_id": "vpc-06d40a7a72c66820b"
+            "vpc_id": "vpc-0a6109e1b5170fcf3"
           },
           "sensitive_attributes": [],
           "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjoxMjAwMDAwMDAwMDAwLCJkZWxldGUiOjEyMDAwMDAwMDAwMDAsInVwZGF0ZSI6MTIwMDAwMDAwMDAwMH19",
@@ -205,8 +202,8 @@
         {
           "schema_version": 0,
           "attributes": {
-            "arn": "arn:aws:ec2:us-east-1:976859928792:route-table/rtb-07365736d562f155d",
-            "id": "rtb-07365736d562f155d",
+            "arn": "arn:aws:ec2:us-east-1:976859928792:route-table/rtb-04b1d3e690405741f",
+            "id": "rtb-04b1d3e690405741f",
             "owner_id": "976859928792",
             "propagating_vgws": [],
             "route": [
@@ -216,7 +213,7 @@
                 "core_network_arn": "",
                 "destination_prefix_list_id": "",
                 "egress_only_gateway_id": "",
-                "gateway_id": "igw-0d5a5de67224efdac",
+                "gateway_id": "igw-0a605829f47f6f4d9",
                 "instance_id": "",
                 "ipv6_cidr_block": "",
                 "local_gateway_id": "",
@@ -228,18 +225,16 @@
               }
             ],
             "tags": {
-              "Name": "public_crt-cerverus-dev-virginia"
+              "Name": "public crt"
             },
             "tags_all": {
-              "Name": "public_crt-cerverus-dev-virginia",
-              "env": "dev",
-              "iac": "Terraform",
-              "owner": "Sebastian",
-              "project": "cerverus",
-              "region": "virginia"
+              "IAC": "Terraform",
+              "Name": "public crt",
+              "env": "Dev",
+              "owner": "Sebastian"
             },
             "timeouts": null,
-            "vpc_id": "vpc-06d40a7a72c66820b"
+            "vpc_id": "vpc-0a6109e1b5170fcf3"
           },
           "sensitive_attributes": [],
           "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjozMDAwMDAwMDAwMDAsImRlbGV0ZSI6MzAwMDAwMDAwMDAwLCJ1cGRhdGUiOjEyMDAwMDAwMDAwMH19",
@@ -260,9 +255,9 @@
           "schema_version": 0,
           "attributes": {
             "gateway_id": "",
-            "id": "rtbassoc-00085207ae1f6d1ff",
-            "route_table_id": "rtb-07365736d562f155d",
-            "subnet_id": "subnet-0497beddc88c76b93"
+            "id": "rtbassoc-033b61dd61ac43d24",
+            "route_table_id": "rtb-04b1d3e690405741f",
+            "subnet_id": "subnet-02d696e16ecf51363"
           },
           "sensitive_attributes": [],
           "private": "bnVsbA==",
@@ -277,86 +272,6 @@
     },
     {
       "mode": "managed",
-      "type": "aws_s3_bucket",
-      "name": "cerverus_bucket",
-      "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
-      "instances": [
-        {
-          "schema_version": 0,
-          "attributes": {
-            "acceleration_status": "",
-            "acl": null,
-            "arn": "arn:aws:s3:::cerverus-4rcjqsiy",
-            "bucket": "cerverus-4rcjqsiy",
-            "bucket_domain_name": "cerverus-4rcjqsiy.s3.amazonaws.com",
-            "bucket_prefix": null,
-            "bucket_regional_domain_name": "cerverus-4rcjqsiy.s3.amazonaws.com",
-            "cors_rule": [],
-            "force_destroy": false,
-            "grant": [
-              {
-                "id": "84cf6c172c54a35d7be65693b19468971feff290bfa63f70c8490e99a2fe2165",
-                "permissions": [
-                  "FULL_CONTROL"
-                ],
-                "type": "CanonicalUser",
-                "uri": ""
-              }
-            ],
-            "hosted_zone_id": "Z3AQBSTGFYJSTF",
-            "id": "cerverus-4rcjqsiy",
-            "lifecycle_rule": [],
-            "logging": [],
-            "object_lock_configuration": [],
-            "object_lock_enabled": false,
-            "policy": "",
-            "region": "us-east-1",
-            "replication_configuration": [],
-            "request_payer": "BucketOwner",
-            "server_side_encryption_configuration": [
-              {
-                "rule": [
-                  {
-                    "apply_server_side_encryption_by_default": [
-                      {
-                        "kms_master_key_id": "",
-                        "sse_algorithm": "AES256"
-                      }
-                    ],
-                    "bucket_key_enabled": false
-                  }
-                ]
-              }
-            ],
-            "tags": {},
-            "tags_all": {
-              "env": "dev",
-              "iac": "Terraform",
-              "owner": "Sebastian",
-              "project": "cerverus",
-              "region": "virginia"
-            },
-            "timeouts": null,
-            "versioning": [
-              {
-                "enabled": false,
-                "mfa_delete": false
-              }
-            ],
-            "website": [],
-            "website_domain": null,
-            "website_endpoint": null
-          },
-          "sensitive_attributes": [],
-          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjoxMjAwMDAwMDAwMDAwLCJkZWxldGUiOjM2MDAwMDAwMDAwMDAsInJlYWQiOjEyMDAwMDAwMDAwMDAsInVwZGF0ZSI6MTIwMDAwMDAwMDAwMH19",
-          "dependencies": [
-            "random_string.sufijo-s3"
-          ]
-        }
-      ]
-    },
-    {
-      "mode": "managed",
       "type": "aws_security_group",
       "name": "sg_public_instance",
       "provider": "provider[\"registry.terraform.io/hashicorp/aws\"]",
@@ -364,7 +279,7 @@
         {
           "schema_version": 1,
           "attributes": {
-            "arn": "arn:aws:ec2:us-east-1:976859928792:security-group/sg-0c68a9105c4ec4de3",
+            "arn": "arn:aws:ec2:us-east-1:976859928792:security-group/sg-03d22c09325e3befc",
             "description": "Allow SSH inbound traffic and ALL egress traffic",
             "egress": [
               {
@@ -381,13 +296,13 @@
                 "to_port": 0
               }
             ],
-            "id": "sg-0c68a9105c4ec4de3",
+            "id": "sg-03d22c09325e3befc",
             "ingress": [
               {
                 "cidr_blocks": [
                   "0.0.0.0/0"
                 ],
-                "description": "",
+                "description": "SSH over Internet",
                 "from_port": 22,
                 "ipv6_cidr_blocks": [],
                 "prefix_list_ids": [],
@@ -395,32 +310,6 @@
                 "security_groups": [],
                 "self": false,
                 "to_port": 22
-              },
-              {
-                "cidr_blocks": [
-                  "0.0.0.0/0"
-                ],
-                "description": "",
-                "from_port": 443,
-                "ipv6_cidr_blocks": [],
-                "prefix_list_ids": [],
-                "protocol": "tcp",
-                "security_groups": [],
-                "self": false,
-                "to_port": 443
-              },
-              {
-                "cidr_blocks": [
-                  "0.0.0.0/0"
-                ],
-                "description": "",
-                "from_port": 80,
-                "ipv6_cidr_blocks": [],
-                "prefix_list_ids": [],
-                "protocol": "tcp",
-                "security_groups": [],
-                "self": false,
-                "to_port": 80
               }
             ],
             "name": "Public Instance SG",
@@ -429,14 +318,12 @@
             "revoke_rules_on_delete": false,
             "tags": {},
             "tags_all": {
-              "env": "dev",
-              "iac": "Terraform",
-              "owner": "Sebastian",
-              "project": "cerverus",
-              "region": "virginia"
+              "IAC": "Terraform",
+              "env": "Dev",
+              "owner": "Sebastian"
             },
             "timeouts": null,
-            "vpc_id": "vpc-06d40a7a72c66820b"
+            "vpc_id": "vpc-0a6109e1b5170fcf3"
           },
           "sensitive_attributes": [],
           "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjo2MDAwMDAwMDAwMDAsImRlbGV0ZSI6OTAwMDAwMDAwMDAwfSwic2NoZW1hX3ZlcnNpb24iOiIxIn0=",
@@ -455,16 +342,16 @@
         {
           "schema_version": 1,
           "attributes": {
-            "arn": "arn:aws:ec2:us-east-1:976859928792:subnet/subnet-0b6a0b02c72661f73",
+            "arn": "arn:aws:ec2:us-east-1:976859928792:subnet/subnet-09f0a487da1fb5313",
             "assign_ipv6_address_on_creation": false,
-            "availability_zone": "us-east-1f",
-            "availability_zone_id": "use1-az5",
+            "availability_zone": "us-east-1d",
+            "availability_zone_id": "use1-az1",
             "cidr_block": "10.10.1.0/24",
             "customer_owned_ipv4_pool": "",
             "enable_dns64": false,
             "enable_resource_name_dns_a_record_on_launch": false,
             "enable_resource_name_dns_aaaa_record_on_launch": false,
-            "id": "subnet-0b6a0b02c72661f73",
+            "id": "subnet-09f0a487da1fb5313",
             "ipv6_cidr_block": "",
             "ipv6_cidr_block_association_id": "",
             "ipv6_native": false,
@@ -474,18 +361,16 @@
             "owner_id": "976859928792",
             "private_dns_hostname_type_on_launch": "ip-name",
             "tags": {
-              "Name": "private_subnet-cerverus-dev-virginia"
+              "Name": "private_subnet"
             },
             "tags_all": {
-              "Name": "private_subnet-cerverus-dev-virginia",
-              "env": "dev",
-              "iac": "Terraform",
-              "owner": "Sebastian",
-              "project": "cerverus",
-              "region": "virginia"
+              "IAC": "Terraform",
+              "Name": "private_subnet",
+              "env": "Dev",
+              "owner": "Sebastian"
             },
             "timeouts": null,
-            "vpc_id": "vpc-06d40a7a72c66820b"
+            "vpc_id": "vpc-0a6109e1b5170fcf3"
           },
           "sensitive_attributes": [],
           "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjo2MDAwMDAwMDAwMDAsImRlbGV0ZSI6MTIwMDAwMDAwMDAwMH0sInNjaGVtYV92ZXJzaW9uIjoiMSJ9",
@@ -505,16 +390,16 @@
         {
           "schema_version": 1,
           "attributes": {
-            "arn": "arn:aws:ec2:us-east-1:976859928792:subnet/subnet-0497beddc88c76b93",
+            "arn": "arn:aws:ec2:us-east-1:976859928792:subnet/subnet-02d696e16ecf51363",
             "assign_ipv6_address_on_creation": false,
-            "availability_zone": "us-east-1f",
-            "availability_zone_id": "use1-az5",
+            "availability_zone": "us-east-1d",
+            "availability_zone_id": "use1-az1",
             "cidr_block": "10.10.0.0/24",
             "customer_owned_ipv4_pool": "",
             "enable_dns64": false,
             "enable_resource_name_dns_a_record_on_launch": false,
             "enable_resource_name_dns_aaaa_record_on_launch": false,
-            "id": "subnet-0497beddc88c76b93",
+            "id": "subnet-02d696e16ecf51363",
             "ipv6_cidr_block": "",
             "ipv6_cidr_block_association_id": "",
             "ipv6_native": false,
@@ -524,18 +409,16 @@
             "owner_id": "976859928792",
             "private_dns_hostname_type_on_launch": "ip-name",
             "tags": {
-              "Name": "public_subnet-cerverus-dev-virginia"
+              "Name": "public_subnet"
             },
             "tags_all": {
-              "Name": "public_subnet-cerverus-dev-virginia",
-              "env": "dev",
-              "iac": "Terraform",
-              "owner": "Sebastian",
-              "project": "cerverus",
-              "region": "virginia"
+              "IAC": "Terraform",
+              "Name": "public_subnet",
+              "env": "Dev",
+              "owner": "Sebastian"
             },
             "timeouts": null,
-            "vpc_id": "vpc-06d40a7a72c66820b"
+            "vpc_id": "vpc-0a6109e1b5170fcf3"
           },
           "sensitive_attributes": [],
           "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjo2MDAwMDAwMDAwMDAsImRlbGV0ZSI6MTIwMDAwMDAwMDAwMH0sInNjaGVtYV92ZXJzaW9uIjoiMSJ9",
@@ -554,19 +437,19 @@
         {
           "schema_version": 1,
           "attributes": {
-            "arn": "arn:aws:ec2:us-east-1:976859928792:vpc/vpc-06d40a7a72c66820b",
+            "arn": "arn:aws:ec2:us-east-1:976859928792:vpc/vpc-0a6109e1b5170fcf3",
             "assign_generated_ipv6_cidr_block": false,
             "cidr_block": "10.10.0.0/16",
-            "default_network_acl_id": "acl-06918b941faf99125",
-            "default_route_table_id": "rtb-0e3a852c76a5518ab",
-            "default_security_group_id": "sg-03b7d50188d10467b",
+            "default_network_acl_id": "acl-04cc5bbff5c4c0746",
+            "default_route_table_id": "rtb-0b2312792ab72ca17",
+            "default_security_group_id": "sg-01f0ac33a50a48c56",
             "dhcp_options_id": "dopt-0a58c513d3a09e3a7",
             "enable_classiclink": false,
             "enable_classiclink_dns_support": false,
             "enable_dns_hostnames": false,
             "enable_dns_support": true,
             "enable_network_address_usage_metrics": false,
-            "id": "vpc-06d40a7a72c66820b",
+            "id": "vpc-0a6109e1b5170fcf3",
             "instance_tenancy": "default",
             "ipv4_ipam_pool_id": null,
             "ipv4_netmask_length": null,
@@ -575,50 +458,20 @@
             "ipv6_cidr_block_network_border_group": "",
             "ipv6_ipam_pool_id": "",
             "ipv6_netmask_length": 0,
-            "main_route_table_id": "rtb-0e3a852c76a5518ab",
+            "main_route_table_id": "rtb-0b2312792ab72ca17",
             "owner_id": "976859928792",
             "tags": {
-              "Name": "vpc_virginia-cerverus-dev-virginia"
+              "Name": "VPC Virginia"
             },
             "tags_all": {
-              "Name": "vpc_virginia-cerverus-dev-virginia",
-              "env": "dev",
-              "iac": "Terraform",
-              "owner": "Sebastian",
-              "project": "cerverus",
-              "region": "virginia"
+              "IAC": "Terraform",
+              "Name": "VPC Virginia",
+              "env": "Dev",
+              "owner": "Sebastian"
             }
           },
           "sensitive_attributes": [],
           "private": "eyJzY2hlbWFfdmVyc2lvbiI6IjEifQ=="
-        }
-      ]
-    },
-    {
-      "mode": "managed",
-      "type": "random_string",
-      "name": "sufijo-s3",
-      "provider": "provider[\"registry.terraform.io/hashicorp/random\"]",
-      "instances": [
-        {
-          "schema_version": 2,
-          "attributes": {
-            "id": "4rcjqsiy",
-            "keepers": null,
-            "length": 8,
-            "lower": true,
-            "min_lower": 0,
-            "min_numeric": 0,
-            "min_special": 0,
-            "min_upper": 0,
-            "number": true,
-            "numeric": true,
-            "override_special": null,
-            "result": "4rcjqsiy",
-            "special": false,
-            "upper": false
-          },
-          "sensitive_attributes": []
         }
       ]
     }
