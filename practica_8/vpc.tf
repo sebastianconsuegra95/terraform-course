@@ -78,3 +78,8 @@ resource "aws_security_group" "sg_public_instance" {
 
 }
 
+module "mybucket" {
+  source      = "./modules/s3"
+  bucket_name = local.s3-sufix
+}
+
